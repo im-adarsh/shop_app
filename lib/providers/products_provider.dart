@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../models/product.dart';
+import 'product_provider.dart';
 
 class ProductsProvider with ChangeNotifier {
-  final List<Product> _items = [
-    Product(
+  final List<ProductProvider> _items = [
+    ProductProvider(
       id: 'p1',
       title: 'Red Shirt',
       description: 'A red shirt - it is pretty red',
@@ -12,7 +12,7 @@ class ProductsProvider with ChangeNotifier {
       imgUrl:
           'https://images-na.ssl-images-amazon.com/images/I/51-O-VCzDfL.jpg',
     ),
-    Product(
+    ProductProvider(
       id: 'p2',
       title: 'Red Shirt',
       description: 'A red shirt - it is pretty red',
@@ -20,7 +20,7 @@ class ProductsProvider with ChangeNotifier {
       imgUrl:
           'https://images-na.ssl-images-amazon.com/images/I/51-O-VCzDfL.jpg',
     ),
-    Product(
+    ProductProvider(
       id: 'p3',
       title: 'Red Shirt',
       description: 'A red shirt - it is pretty red',
@@ -28,7 +28,7 @@ class ProductsProvider with ChangeNotifier {
       imgUrl:
           'https://images-na.ssl-images-amazon.com/images/I/51-O-VCzDfL.jpg',
     ),
-    Product(
+    ProductProvider(
       id: 'p4',
       title: 'Red Shirt',
       description: 'A red shirt - it is pretty red',
@@ -36,7 +36,7 @@ class ProductsProvider with ChangeNotifier {
       imgUrl:
           'https://images-na.ssl-images-amazon.com/images/I/51-O-VCzDfL.jpg',
     ),
-    Product(
+    ProductProvider(
       id: 'p5',
       title: 'Red Shirt',
       description: 'A red shirt - it is pretty red',
@@ -46,7 +46,7 @@ class ProductsProvider with ChangeNotifier {
     ),
   ];
 
-  List<Product> get items {
+  List<ProductProvider> get items {
     return _items;
   }
 
@@ -55,7 +55,7 @@ class ProductsProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  Product findById(String id) {
+  ProductProvider findById(String id) {
     return _items.firstWhere((prod) => prod.id == id);
   }
 }
