@@ -15,5 +15,10 @@ class ProductProvider with ChangeNotifier {
       @required this.description,
       @required this.imgUrl,
       @required this.price,
-      @required this.isFavourite});
+      this.isFavourite = false});
+
+  void toggleFavouriteStatus() {
+    isFavourite = !isFavourite;
+    notifyListeners();
+  }
 }
