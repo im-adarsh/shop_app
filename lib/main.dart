@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'const/app_ui.dart';
 import 'providers/products_provider.dart';
 import 'screens/product_detail_screen.dart';
 import 'screens/product_overview_screens.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           title: 'My Shop',
           theme: ThemeData(
-            primarySwatch: Colors.purple,
+            primarySwatch: APP_MAIN_COLOR,
           ),
           home: ProductOverviewScreen(),
           routes: {
